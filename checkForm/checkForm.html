@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				color: #333;
+				text-decoration: none;
+			}
+			img{
+				display: block;
+			}
+			ul{
+				list-style: none;
+			}
+			body{
+				font-family: "Microsoft Yahei";
+				font-size: 14px;
+			}
+			input[type="radio"],input[type="checkbox"]{
+				width: 14px;
+				height: 14px;
+				margin-right: 4px;
+				vertical-align: middle;
+			}
+			label{
+				vertical-align: middle;
+				
+			}
+			h2{
+				text-align: center;
+				height: 60px;
+				line-height: 60px;
+			}
+			.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+			.clearfix{zoom:1} 
+			.areaWidth{
+				width: 1200px;
+				margin: 0 auto;
+				color: #333;
+			}
+			.form{
+				width: 460px;
+				margin: 0 auto;
+				background: #333;
+				color: #fff;
+				padding: 50px;
+			}
+			.form .row{
+				width: 100%;
+				float: left;
+				margin: 10px 0;
+				position: relative;
+			}
+			.form .tips,.form .tips{
+				display: none;
+				color: #fc3a3a;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			.form input{
+				border: 1px solid #efefef;
+				font-family: "微软雅黑";
+			}
+			.form input[type="text"],.form input[type="password"],.form select{
+				width: 260px;
+				height: 35px;
+				line-height: 35px;
+				padding-left: 8px;
+			}
+			.form input[type="submit"],.form input[type="button"]{
+				width: 100px;
+				margin-left: 160px;
+				margin-top: 20px;
+				font-size: 16px;
+				border: none;
+				background: #3ea59a;
+				color: #fff;
+				height: 35px;
+				line-height: 35px;
+				border-radius: 4px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-ms-border-radius: 4px;
+			}
+			.form textarea{
+				width: 260px;
+				height: 100px;
+				resize: none;
+				outline: none;
+			}
+			.form label{
+				display: block;
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				float: left;
+			}
+			.form .row.active input,.form .row.active select,.form .row.active textarea{
+				border-color: #f91515;
+				
+			}
+			.form .row.active .tips,.form .row.active .tips{
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="areaWidth">
+			<h2>登录</h2>
+			<form class="form form1 clearfix" action="https://www.baidu.com/">
+				<div class="row">
+					<label>用户名：</label>
+					<input type="text" required />
+					<span class="tips">用户名不能为空！</span>
+				</div>
+				<div class="row">
+					<label>密码：</label>
+					<input type="password"  data-type="passwords" required/>
+					<span class="tips">密码错误！</span>
+				</div>
+				<div>
+					<input type="button" class="login" value="登录" />
+				</div>
+			</form>
+			<h2>信息提交</h2>
+    			<form class="form form2 clearfix">
+    				<div class="row">
+    					<label>姓名：</label>
+    					<input type="text" data-type="name" required />
+    					<span class="tips">姓名不能为空</span>
+    				</div>
+    				<div class="row choice" required="required">
+    					<label>性别：</label>
+    					<label><input type="radio" name="sex" value="1"/>男</label>
+    					<label><input type="radio" name="sex" value="2"/>女</label>
+    					<span class="tips">请选择性别</span>
+    				</div>
+    				<div class="row">
+    					<label>电话号码：</label>
+    					<input type="text" data-type="tel" />
+    				</div>
+    				<div class="row">
+    					<label>手机号码：</label>
+    					<input type="text" data-type="phone" required />
+    					<span class="tips">手机号不能为空</span>
+    				</div>
+    				<div class="row">
+    					<label>邮箱：</label>
+    					<input type="text" data-type="email" required />
+    					<span class="tips">邮箱不能为空</span>
+    				</div>
+    				<div class="row">
+    					<label>总价：</label>
+    					<input type="text" data-type="numbers" required />
+    					<span class="tips">总价不能为空</span>
+    				</div>
+    				<div class="row choice" required="required">
+    					<label>兴趣爱好：</label>
+    					<label><input type="checkbox" name="hobby" value="1">摄影</label>
+    					<label><input type="checkbox" name="hobby" value="2">户外</label>
+    					<label><input type="checkbox" name="hobby" value="3">健身</label>
+    					<label><input type="checkbox" name="hobby" value="4">绘画</label>
+    					<label><input type="checkbox" name="hobby" value="5">其它</label>
+    					<span class="tips">请选择兴趣爱好</span>
+    				</div>
+    				<div class="row">
+    					<label>类型：</label>
+    					<select required>
+    						<option value="">请选择</option>
+    						<option value="1">普通用户</option>
+    						<option value="2">会员</option>
+    					</select>
+    					<span class="tips">请选择类型</span>
+    				</div>
+    				<div class="row">
+    					<label>备注：</label>
+    					<textarea required>
+    						
+    					</textarea>
+    					<span class="tips">必填项</span>
+    				</div>
+    				<div>
+    					<input type="button" class="tijiao" value="提交" />
+    				</div>
+    			</form>
+
+    	</div>
+	</body>
+</html>
+<script type="text/javascript" src="script/jQuery.js"></script>
+<script type="text/javascript" src="script/form.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var F=new formCheck();
+		$('.login').click(function(){
+				var a=F.submitForm('.form1');
+				console.log(a);
+		})
+		$('.form1 input').focusin(function(){
+			F.focusinfo(this);
+		})
+		$('.form1 input').focusout(function(){
+			F.onblurinfo(this);
+		})
+		$('.tijiao').off().on('click',function(){
+				var a=F.submitForm('.form2');
+				console.log(a);
+		})
+	})
+</script>
